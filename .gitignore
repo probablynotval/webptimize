@@ -1,0 +1,8 @@
+/.cargo
+/target
+/tests/images
+
+*.svg
+*.data*
+
+profile.json
