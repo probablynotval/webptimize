@@ -20,6 +20,20 @@ fn bench(c: &mut Criterion) {
             )
         })
     });
+    group.bench_function("convert_lossless", |b| {
+        b.iter(|| {
+            convert_to_webp(
+                black_box(Path::new(
+                    "/home/val/Documents/Repos/webptimize/tests/images",
+                )),
+                black_box(Some(Path::new(
+                    "/home/val/Documents/Repos/webptimize/tests/images/webp",
+                ))),
+                black_box(true),
+                black_box(100.0),
+            )
+        })
+    });
 }
 
 criterion_group!(benches, bench);
