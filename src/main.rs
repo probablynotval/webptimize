@@ -1,10 +1,7 @@
-mod commands;
-
 use clap::Parser;
-use commands::*;
 use env_logger::Target;
 use log::LevelFilter;
-use webptimize::convert_to_webp;
+use webptimize::{commands::*, convert_to_webp};
 
 fn main() {
     let _logger = env_logger::builder()

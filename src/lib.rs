@@ -1,3 +1,5 @@
+pub mod commands;
+
 use std::{
     error::Error,
     fs,
