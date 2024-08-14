@@ -20,15 +20,8 @@ fn main() {
             output_directory,
             quality,
             lossless,
-            recursive,
         } => {
-            if *recursive {
-                // handle recursing
-                todo!()
-            } else {
-                convert_to_webp(input_path, output_directory.as_deref(), *lossless, *quality)
-                    .unwrap();
-            }
+            convert_to_webp(input_path, output_directory.as_deref(), *lossless, *quality).unwrap();
         }
     }
 }

@@ -31,16 +31,8 @@ pub enum Commands {
             short,
             long,
             default_value_t = false,
-            help = "Wether to convert images in a lossless manner"
+            help = "Wether to convert images in a lossless manner (slow)"
         )]
         lossless: bool,
-
-        #[arg(
-            short,
-            long,
-            default_value_t = false,
-            help = "Wether to recurse into subdirectories"
-        )]
-        recursive: bool,
     },
 }
