@@ -1,4 +1,3 @@
-use log::{debug, info};
 use webptimize::convert_to_webp;
 
 use env_logger::Target;
