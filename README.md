@@ -36,6 +36,7 @@ If for some reason you wish to convert losslessly it can be done using the -l fl
 webptimize convert /path/to/dir /path/to/dir/webptimized -l
 ```
 Warning: this is quite slow.
+
 If neither the output path or quality are specified the same directory will be used along with a quality of 80.
 
 
