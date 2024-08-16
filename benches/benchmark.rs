@@ -78,6 +78,28 @@ fn bench(c: &mut Criterion) {
             )
         })
     });
+
+    group.bench_function("test-quantity-s", |b| {
+        b.iter(|| {
+            convert_to_webp(
+                black_box(Path::new(&crate_root.join("tests/images/test-small"))),
+                black_box(Some(tempdir()?.path())),
+                black_box(false),
+                black_box(80.0),
+            )
+        })
+    });
+
+    group.bench_function("test-quantity-b", |b| {
+        b.iter(|| {
+            convert_to_webp(
+                black_box(Path::new(&crate_root.join("tests/images/test-big"))),
+                black_box(Some(tempdir()?.path())),
+                black_box(false),
+                black_box(80.0),
+            )
+        })
+    });
 }
 
 criterion_group!(benches, bench);
